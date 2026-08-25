@@ -1,0 +1,40 @@
+Senior Data Scientist - Acme Cloud (Lisbon, Hybrid)
+
+About the role
+We are looking for a Senior Data Scientist to join our growing ML platform
+team. You will work end-to-end: from framing the problem with stakeholders,
+through prototyping and evaluating models, to productionizing them at scale
+on our Kubernetes-based data platform.
+
+Responsibilities
+- Design, build, and maintain production ML systems handling terabytes of
+  event data per day
+- Partner with product, infra, and analytics teams to identify high-impact
+  opportunities
+- Mentor junior data scientists and review their work
+- Contribute to our internal MLOps tooling (feature store, model registry,
+  experiment tracking)
+
+Required
+- 5+ years of professional experience building ML systems in production
+- Strong Python and SQL skills
+- Hands-on experience with at least one of: PyTorch, TensorFlow, scikit-learn
+- Experience with cloud platforms (AWS, GCP, or Azure)
+- Solid understanding of A/B testing and causal inference
+- Excellent communication; comfortable working cross-functionally
+
+Nice to have
+- Experience with streaming systems (Kafka, Spark Streaming, Flink)
+- Familiarity with infrastructure-as-code (Terraform, Pulumi)
+- Knowledge of feature stores and modern MLOps platforms
+- Background in time-series forecasting or NLP
+- Experience scaling teams or projects
+
+What we offer
+- Competitive salary + equity
+- Hybrid working from our Lisbon office
+- Annual learning budget
+- A small, opinionated team that ships
+
+Keywords: scalable, production, ML platform, cross-functional, mentorship, MLOps,
+real-time, feature store, experimentation, causal inference.

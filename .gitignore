@@ -1,0 +1,36 @@
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.pdf
+*.jpg
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.nav
+*.snm
+*.vrb
+*.toc
+*.lof
+*.lot
+
+# TTL generated files
+*.ttl
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Editor files
+*.swp
+*.swo
+*~
+
+# Pipeline output (per-application workspaces)
+applications/
+

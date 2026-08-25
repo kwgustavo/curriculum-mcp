@@ -1,0 +1,35 @@
+placeholders:
+  first_name:
+    field: personal.first_name
+    type: text
+  last_name:
+    field: personal.last_name
+    type: text
+  email:
+    field: contact.email
+    type: text
+  photo_path:
+    field: personal.photo_path
+    type: text
+  profile_text:
+    field: profile_text
+    type: text
+    max_chars: 600
+  experience:
+    field: experience
+    type: list
+    filter: included
+  education:
+    field: education
+    type: list
+    filter: included
+  skills:
+    field: skills
+    type: list
+    filter: included
+  languages:
+    field: languages
+    type: list
+  hobbies:
+    field: hobbies
+    type: list

@@ -1,0 +1,68 @@
+requires_biber: true
+
+placeholders:
+  first_name:
+    field: personal.first_name
+    type: text
+
+  last_name:
+    field: personal.last_name
+    type: text
+
+  title:
+    field: personal.title
+    type: text
+
+  photo_path:
+    field: personal.photo_path
+    type: text
+
+  email:
+    field: contact.email
+    type: text
+
+  phone:
+    field: contact.phone
+    type: text
+
+  address:
+    field: contact.address
+    type: text
+
+  location:
+    field: contact.address
+    type: text
+
+  linkedin:
+    field: contact.linkedin
+    type: text
+
+  website:
+    field: contact.website
+    type: text
+
+  github:
+    field: contact.github
+    type: text
+
+  experience:
+    field: experience
+    type: list
+    formatter: format_experience_entry
+    max_items: 10
+
+  skills:
+    field: skills
+    type: list
+    max_items: 15
+
+  languages:
+    field: languages
+    type: list
+    max_items: 10
+
+  education:
+    field: education
+    type: list
+    formatter: format_education_entry
+    max_items: 10

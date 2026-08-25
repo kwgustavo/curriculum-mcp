@@ -1,0 +1,108 @@
+personal:
+  name: Jane Doe
+  first_name: Jane
+  last_name: Doe
+  title: Senior Data Scientist
+  citizenship: Portuguese
+  family_status: Single without children
+  photo_path: oval-transparent.png
+
+contact:
+  email: jane.doe@example.com
+  phone: "+351 912 345 678"
+  github: janedoe
+  linkedin: janedoe
+  website: janedoe.dev
+  address: "Lisbon, Portugal"
+
+profile_text: |
+  Innovative data scientist with 10+ years of experience designing and
+  shipping production ML systems across fintech and ad-tech.
+
+  Proficient in Python, SQL, and large-scale data pipelines; proven track
+  record of leading cross-functional teams from ideation to measurable impact.
+
+experience:
+  - title: Senior Data Scientist
+    company: Acme Analytics
+    location: Lisbon
+    start: "2021.04"
+    end: pres.
+    bullets:
+      - "Designed and shipped a real-time bidding pipeline processing 4B events/day"
+      - "Led team of 5 engineers; introduced MLflow for experiment tracking"
+      - "Cut model training cost 38% by migrating to spot instances + autoscale"
+  - title: Data Scientist
+    company: Insightful Corp
+    location: Remote
+    start: "2019.02"
+    end: "2020.11"
+    bullets:
+      - "Built churn prediction model (XGBoost) raising retention 12%"
+      - "Authored internal A/B testing framework adopted across 4 product teams"
+      - "Mentored 3 junior data scientists on best practices"
+  - title: Data Analyst
+    company: BlueRiver Factory
+    location: Porto
+    start: "2018.02"
+    end: "2018.12"
+    bullets:
+      - "Automated weekly reporting with Python + Airflow, saving 20h/week"
+      - "Built Looker dashboards for executive stakeholders"
+  - title: Research Intern
+    company: Snozzberry Labs
+    location: Coimbra
+    start: "2017.06"
+    end: "2017.09"
+    bullets:
+      - "Prototyped time-series forecasting models using PyTorch"
+
+education:
+  - degree: MSc in Data Science
+    field: Machine Learning
+    institution: University of Lisbon
+    start: "2015"
+    end: "2017"
+    bullets:
+      - "Thesis: Bayesian Optimization for Hyperparameter Search"
+  - degree: BSc in Computer Science
+    institution: University of Porto
+    start: "2011"
+    end: "2015"
+    bullets:
+      - "GPA 3.9/4.0; Dean's list all semesters"
+
+additional_education:
+  - degree: Deep Learning Specialization
+    institution: Coursera / deeplearning.ai
+    start: "2020"
+    end: "2020"
+
+skills:
+  - name: "Python, SQL, PySpark"
+    category: Programming
+  - name: "R, Matlab, Azure Databricks"
+    category: Data
+  - name: "PyTorch, TensorFlow, scikit-learn"
+    category: ML
+  - name: "AWS (S3, EC2, Lambda), GCP (BigQuery)"
+    category: Cloud
+  - name: "Docker, Kubernetes, Terraform"
+    category: DevOps
+  - name: "dbt, Airflow, Spark, Kafka"
+    category: Data Eng
+  - name: "Communication and team collaboration"
+    category: "Soft skills"
+
+languages:
+  - name: Portuguese
+    level: native
+  - name: English
+    level: C2
+  - name: Spanish
+    level: B1
+
+hobbies:
+  - "Music: jazz piano, composing short ambient tracks"
+  - "Running: half-marathons, trail ultras"
+  - "Photography: long-exposure urban nightscapes"

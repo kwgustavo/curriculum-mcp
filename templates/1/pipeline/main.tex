@@ -1,0 +1,62 @@
+\documentclass[paper=a4,fontsize=11pt]{temp}
+\begin{document}
+
+\begin{minipage}{.2\linewidth}
+   \includegraphics[width=1\textwidth]{<<photo_path>>}
+\end{minipage}
+\begin{minipage}{0.7\linewidth}
+   \MyName{ <<first_name>> <<last_name>>}
+   \sepspace
+   \noindent
+   \hfill <<email>>
+\end{minipage}
+
+
+\NewPart{Work experience}{}
+\noindent
+
+<<#experience>>
+\workEntry{<<company>>}{<<start>> -- <<end>>}{<<title>>}{<<bullets>>}{IMG/soft/office}
+\sepspace
+<</experience>>
+
+
+\NewPart{Education}{}
+\noindent
+
+<<#education>>
+\EducationEntry{<<degree>>}{<<start>> -- <<end>>}{<<institution>>}{<<bullets>>}{IMG/soft/office}
+\sepspace
+<</education>>
+
+
+\NewPart{Skills \& Interests}{}
+\hspace{3mm}
+\begin{minipage}[t]{0.33\textwidth}
+
+\begin{tabular}[t]{ l l }
+<<#languages>>
+\textbf{<<name>>}~(<<level>>) \\
+<</languages>>
+\end{tabular}
+
+\sepspace
+
+\end{minipage}
+%
+\begin{minipage}[t]{0.66\textwidth}
+\begin{itemize}
+<<#skills>>
+\item \textbf{<<category>>:} <<name>>
+<</skills>>
+\end{itemize}
+\end{minipage}
+
+\begin{tabular}{l l}
+<<#hobbies>>
+<<.>>, \\
+<</hobbies>>
+\end{tabular}
+
+
+\end{document}

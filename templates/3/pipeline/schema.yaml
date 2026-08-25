@@ -1,0 +1,68 @@
+requires_biber: false
+placeholders:
+  first_name:
+    field: personal.first_name
+    type: text
+  last_name:
+    field: personal.last_name
+    type: text
+  photo_path:
+    field: personal.photo_path
+    type: text
+  profile_text:
+    field: profile_text
+    type: text
+    max_chars: 600
+  email:
+    field: contact.email
+    type: text
+  phone:
+    field: contact.phone
+    type: text
+  github:
+    field: contact.github
+    type: inline
+    formatter: format_github_href
+  address:
+    field: contact.address
+    type: text
+  website:
+    field: contact.website
+    type: text
+  linkedin:
+    field: contact.linkedin
+    type: text
+  citizenship:
+    field: personal.citizenship
+    type: text
+  family_status:
+    field: personal.family_status
+    type: text
+  languages_inline:
+    field: languages
+    type: inline
+    formatter: format_language_inline
+  skills:
+    field: skills
+    type: list
+    filter: included
+    formatter: format_skill_bullet
+  experience:
+    field: experience
+    type: list
+    filter: included
+    formatter: format_experience_entry
+  education:
+    field: education
+    type: list
+    filter: included
+    formatter: format_education_entry
+  additional_education:
+    field: additional_education
+    type: list
+    filter: included
+    formatter: format_education_entry
+  hobbies:
+    field: hobbies
+    type: list
+    formatter: format_hobby_item
