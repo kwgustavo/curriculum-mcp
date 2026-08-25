@@ -471,7 +471,7 @@ def screenshot_pdf(
         f"- [ ] Colors and contrast are appropriate\n"
     )
 
-    return [Image(path=str(out_path)), text_report]
+    return f"Screenshot saved: {out_path}\n\n{text_report}"
 
 
 @mcp.tool()
@@ -541,7 +541,7 @@ def screenshot_pdf_all(
 
     doc.close()
     summary = f"Screenshots for {total} page(s):\n\n" + "\n\n".join(results)
-    return images + [summary]
+    return summary
 
 
 # ══════════════════════════════════════════════════════════════════════════════
