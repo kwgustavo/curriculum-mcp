@@ -470,6 +470,10 @@ def render(template: TemplateSchema, profile: TailoredProfile) -> str:
             if spec and spec.type == "list":
                 rendered = _render_list_placeholder(spec, profile, inner)
                 src = src[: m.start()] + rendered + src[close.end() :]
+            elif spec is not None:
+                value = _get_dotted(profile, spec.field)
+                kept = inner if value not in (None, "", [], {}) else ""
+                src = src[: m.start()] + kept + src[close.end() :]
             else:
                 # Unknown block — strip the tags, keep inner content
                 src = src[: m.start()] + inner + src[close.end() :]

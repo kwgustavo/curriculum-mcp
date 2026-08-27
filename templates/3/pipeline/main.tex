@@ -77,7 +77,7 @@
 \Large <<first_name>> \textbf{\textsc{<<last_name>>}} \normalsize
 
 % Centering without extra vertical spacing
-\null\hfill\includegraphics[width=0.65\textwidth]{<<photo_path>>}\hfill\null
+<<#photo_path>>\null\hfill\includegraphics[width=0.65\textwidth]{<<photo_path>>}\hfill\null<</photo_path>>
 
 \vspace*{0.5ex} % Extra space after the picture
 
@@ -87,15 +87,15 @@
 \headleft{Contact details}
 \small % To fit more content
 \href{mailto:<<email>>}{\MVAt\ {\small <<email>>}} \\[0.4ex]
-\href{tel:<<phone>>}{\Mobilefone\ <<phone>>} \\[0.5ex]
+<<#phone>>\href{tel:<<phone>>}{\Mobilefone\ <<phone>>} \\[0.5ex]<</phone>>
 \Mundus\ <<github>> \\[0.1ex]
-\href{https://linkedin.com/in/<<linkedin>>}{\Letter\ <<linkedin>>} \\[0.1ex]
-\href{http://<<website>>}{\Letter\ <<website>>}
+<<#linkedin>>\href{https://linkedin.com/in/<<linkedin>>}{\Letter\ <<linkedin>>} \\[0.1ex]<</linkedin>>
+<<#website>>\href{http://<<website>>}{\Letter\ <<website>>}<</website>>
 \normalsize
 
 \headleft{Personal information}
 Citizenship: \textbf{<<citizenship>>} \\[0.5ex]
-Family: \textbf{<<family_status>>} \\[0.5ex]
+<<#family_status>>Family: \textbf{<<family_status>>} \\[0.5ex]<</family_status>>
 Languages: <<languages_inline>>
 
 \headleft{Skills}
