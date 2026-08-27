@@ -106,7 +106,7 @@ def format_experience_entry(item: dict[str, Any]) -> str:
     for i, b in enumerate(bullets):
         suffix = " \\\\" if i < len(bullets) - 1 else ""
         lines.append(f"\\smaller{{{_latex_escape(b)}}}{suffix}")
-    return "\n".join(lines)
+    return "\n".join(lines) + "\n"
 
 
 def format_education_entry(item: dict[str, Any]) -> str:
@@ -126,7 +126,7 @@ def format_education_entry(item: dict[str, Any]) -> str:
     for i, b in enumerate(bullets):
         suffix = " \\\\" if i < len(bullets) - 1 else ""
         lines.append(f"\\smaller{{{_latex_escape(b)}}}{suffix}")
-    return "\n".join(lines)
+    return "\n".join(lines) + "\n"
 
 
 def format_skill_bullet(item: dict[str, Any]) -> str:
