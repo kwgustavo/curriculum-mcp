@@ -297,7 +297,13 @@ _BLOCK_OPEN = re.compile(r"<<#(\w+)>>")
 _BLOCK_CLOSE = re.compile(r"<</(\w+)>>")
 
 
+_ACTIVE_ACCESSORS = {"profile_text": "active_profile_text"}
+
+
 def _get_dotted(obj: Any, dotted: str) -> Any:
+    accessor = _ACTIVE_ACCESSORS.get(dotted)
+    if accessor is not None and callable(getattr(obj, accessor, None)):
+        return getattr(obj, accessor)()
     cur = obj
     for part in dotted.split("."):
         if cur is None:
