@@ -98,18 +98,18 @@
 \tagline{<<title>>}
 % Cropped to square from https://en.wikipedia.org/wiki/Marissa_Mayer#/media/File:Marissa_Mayer_May_2014_(cropped).jpg, CC-BY 2.0
 %% You can add multiple photos on the left or right
-\photoR{2.5cm}{<<photo_path>>}
+<<#photo_path>>\photoR{2.5cm}{<<photo_path>>}<</photo_path>>
 % \photoL{2cm}{Yacht_High,Suitcase_High}
 \personalinfo{%
   % Not all of these are required!
   \email{<<email>>}
-  \phone{<<phone>>}
+<<#phone>>  \phone{<<phone>>}<</phone>>
   \mailaddress{<<address>>}
-  \location{<<location>>}
-  \linkedin{<<linkedin>>}
+<<#location>>  \location{<<location>>}<</location>>
+<<#linkedin>>  \linkedin{<<linkedin>>}<</linkedin>>
   % \twitter{@marissamayer}
   % \xtwitter{@marissamayer}
-  \homepage{<<website>>}
+<<#website>>  \homepage{<<website>>}<</website>>
   \printinfo{\faGithub}{\href{https://github.com/<<github>>}{<<github>>}}
 %   \orcid{0000-0000-0000-0000} % Obviously making this up too.
   %% You can add your own arbitrary detail with

@@ -106,7 +106,7 @@ def format_experience_entry(item: dict[str, Any]) -> str:
     for i, b in enumerate(bullets):
         suffix = " \\\\" if i < len(bullets) - 1 else ""
         lines.append(f"\\smaller{{{_latex_escape(b)}}}{suffix}")
-    return "\n".join(lines)
+    return "\n".join(lines) + "\n"
 
 
 def format_education_entry(item: dict[str, Any]) -> str:
@@ -126,7 +126,7 @@ def format_education_entry(item: dict[str, Any]) -> str:
     for i, b in enumerate(bullets):
         suffix = " \\\\" if i < len(bullets) - 1 else ""
         lines.append(f"\\smaller{{{_latex_escape(b)}}}{suffix}")
-    return "\n".join(lines)
+    return "\n".join(lines) + "\n"
 
 
 def format_skill_bullet(item: dict[str, Any]) -> str:
@@ -297,7 +297,13 @@ _BLOCK_OPEN = re.compile(r"<<#(\w+)>>")
 _BLOCK_CLOSE = re.compile(r"<</(\w+)>>")
 
 
+_ACTIVE_ACCESSORS = {"profile_text": "active_profile_text"}
+
+
 def _get_dotted(obj: Any, dotted: str) -> Any:
+    accessor = _ACTIVE_ACCESSORS.get(dotted)
+    if accessor is not None and callable(getattr(obj, accessor, None)):
+        return getattr(obj, accessor)()
     cur = obj
     for part in dotted.split("."):
         if cur is None:
@@ -464,6 +470,10 @@ def render(template: TemplateSchema, profile: TailoredProfile) -> str:
             if spec and spec.type == "list":
                 rendered = _render_list_placeholder(spec, profile, inner)
                 src = src[: m.start()] + rendered + src[close.end() :]
+            elif spec is not None:
+                value = _get_dotted(profile, spec.field)
+                kept = inner if value not in (None, "", [], {}) else ""
+                src = src[: m.start()] + kept + src[close.end() :]
             else:
                 # Unknown block — strip the tags, keep inner content
                 src = src[: m.start()] + inner + src[close.end() :]

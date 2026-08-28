@@ -75,7 +75,7 @@
 \Large <<first_name>> \textbf{\textsc{<<last_name>>}} \normalsize
 
 % Centering without extra vertical spacing
-\null\hfill\includegraphics[width=0.65\textwidth]{<<photo_path>>}\hfill\null
+<<#photo_path>>\null\hfill\includegraphics[width=0.65\textwidth]{<<photo_path>>}\hfill\null<</photo_path>>
 
 \vspace*{0.5ex} % Extra space after the picture
 
@@ -85,13 +85,13 @@
 \headleft{Contact details}
 \small % To fit more content
 \MVAt\ {\small <<email>>} \\[0.4ex]
-\Mobilefone\ <<phone>> \\[0.5ex]
+<<#phone>>\Mobilefone\ <<phone>> \\[0.5ex]<</phone>>
 \Letter\ <<address>>
 \normalsize
 
 \headleft{Personal information}
 Citizenship: \textbf{<<citizenship>>} \\[0.5ex]
-Family: \textbf{<<family_status>>} \\[0.5ex]
+<<#family_status>>Family: \textbf{<<family_status>>} \\[0.5ex]<</family_status>>
 Languages: <<languages_inline>>
 
 \headleft{Skills}
